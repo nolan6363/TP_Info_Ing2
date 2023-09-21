@@ -86,6 +86,7 @@ int main(int argc, char const *argv[])
 
 	char filename[100];
 
+	printf("Veuillez saisir le nom du fichier à lire : ");
 	scanf("%s", &filename);
 	fillGraph(&graph, filename);
 
