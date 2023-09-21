@@ -1,0 +1,10 @@
+7
+François S,Fabienne C,Julienne P,Louis M,Boubaker D,Ilhem F,JPS,
+(0,1)
+(0,6)
+(1,6)
+(2,6)
+(6,2)
+(6,3)
+(6,4)
+(6,5)
