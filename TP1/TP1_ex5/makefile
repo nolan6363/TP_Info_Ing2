@@ -1,6 +1,6 @@
 CC = gcc
 HEADER_DIR = include
-CFLAGS = -w -O2 -I$(HEADER_DIR)
+CFLAGS = -w -Wall -O2 -I$(HEADER_DIR)
 SRCDIR = src
 BINDIR = bin
 

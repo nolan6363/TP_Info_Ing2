@@ -43,10 +43,18 @@ void fillGraph(Graph* graph, char* filename){
 	initGraph(ordre, graph);
 
 	// Sauter une ligne
-	fgets(ligne, sizeof(ligne), file);
+	if(!fgets(ligne, sizeof(ligne), file)){
+		fclose(file);
+		printf("erreur de lecture du fichier\n");
+        return;
+	}
 
 	// Lire la première ligne
-	fgets(ligne, sizeof(ligne), file);
+	if(!fgets(ligne, sizeof(ligne), file)){
+        fclose(file);
+        printf("erreur de lecture du fichier\n");
+        return;
+    };
 
 	// récupère les nom des personnes séparées par des virgules
 	char *token = strtok(ligne, ",");
@@ -87,7 +95,10 @@ int main(int argc, char const *argv[])
 	char filename[100];
 
 	printf("Veuillez saisir le nom du fichier à lire : ");
-	scanf("%s", &filename);
+	if(!scanf("%s", filename)){
+		printf("Erreur de saisie\n");
+        return 1;
+	}
 	fillGraph(&graph, filename);
 
 	printDependance(&graph);
